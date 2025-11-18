@@ -1,5 +1,4 @@
 import { NextAuthOptions } from "next-auth";
-import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { connectToDb } from "@/db/db";
 import User from "@/models/User";
@@ -43,7 +42,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error("Incorrect password");
           }
 
-          return { id: user._id.toString() };
+          return { id: user._id.toString(), email: user.email };
         } catch (error) {
           console.log("Auth error:", error);
           throw new Error("Failed to login");

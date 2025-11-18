@@ -100,7 +100,7 @@ export function SignInForm({
                   <FieldLabel htmlFor="password">Confirm Password</FieldLabel>
                 </div>
                 <Input
-                  id="password"
+                  id="confirm-password"
                   type="password"
                   value={confirmPassword}
                   placeholder="Confirm Password"
