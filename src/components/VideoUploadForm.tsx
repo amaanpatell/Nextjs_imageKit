@@ -54,8 +54,7 @@ export default function VideoUploadForm() {
       showNotification("Video published successfully!", "success");
       reset();
       setUploadProgress(0);
-      router.push("/");
-      
+      setTimeout(() => router.push("/"), 2000);
     } catch (error) {
       showNotification(
         error instanceof Error ? error.message : "Failed to publish video",
@@ -283,7 +282,6 @@ export default function VideoUploadForm() {
             </form>
           </div>
         </div>
-
       </div>
     </div>
   );
