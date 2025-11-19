@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <div className="">
       <NotificationProvider>
-        <Header />
-        <div>
+        <Header/>
+        <div className="max-w-7xl mx-auto">
           <VideoFeed videos={videos} />
         </div>
       </NotificationProvider>

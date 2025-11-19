@@ -7,7 +7,6 @@ export async function GET() {
       publicKey: process.env.IMAGEKIT_PUBLIC_KEY as string,
     });
     
-    // Return the authentication parameters directly at root level
     return Response.json(authenticationParameters);
   } catch (error) {
     console.error("ImageKit auth error:", error);

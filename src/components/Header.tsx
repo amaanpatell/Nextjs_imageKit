@@ -19,16 +19,14 @@ export default function Header() {
   };
 
   return (
-    <div className="navbar bg-base-300">
-      <div className="container flex justify-between items-center ">
+    <div className=" navbar bg-base-300">
+      <div className="max-w-7xl mx-auto container flex justify-between items-center ">
         <div className="flex-1 px-2 lg:flex-none">
           <Link
             href="/"
             className="btn btn-ghost text-xl gap-2 normal-case font-bold"
             prefetch={true}
-            onClick={() =>
-              showNotification("Welcome to ImageKit AI", "info")
-            }
+            onClick={() => showNotification("Welcome to ImageKit AI", "info")}
           >
             <Home className="w-5 h-5" />
             Video with AI
